@@ -54,11 +54,6 @@
       padding: 0;
     }
 
-    #navbarMenu {
-      width: 320px;
-      float: right;
-    }
-
     .hl-logo {
       max-height: 40px;
       padding: 0 10px 0;
@@ -73,6 +68,11 @@
 @media screen and (min-width: $tablet) and (max-width: $desktop - 1px) {
   .hl-header {
     padding: 20px;
+
+    #navbarMenu {
+      width: 320px;
+      float: right;
+    }
   }
 }
 
