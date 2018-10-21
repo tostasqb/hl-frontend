@@ -1,12 +1,16 @@
+@import 'bulma/sass/utilities/_all.sass';
 @import '../common/variables.scss';
 
+@import 'bulma/sass/layout/hero.sass';
+@import 'bulma/sass/layout/section.sass';
+
 .hl-main {
-  background: linear-gradient(to top, rgba(255, 255, 255, 0.3) 45%, rgba(255, 255, 255, 0.4) 59%, rgba(255, 255, 255, 1) 100%), url(./homepage.jpg) no-repeat;
+  background: linear-gradient(to top, rgba(255, 255, 255, 0.4) 19%, white 82%), url("homepage.jpg") no-repeat;
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center bottom;
-  min-height: 600px;
-  padding: 40px 30px 0 30px;
+  // min-height: 600px;
+  // padding: 100px 30px 0 70px;
 
   h1,
   h2,
@@ -35,6 +39,7 @@
     color: $main;
     font-weight: 100;
     font-size: 21px;
+    text-shadow: 0px 0px 1px $white;
   }
 
   &__actions {
@@ -63,8 +68,22 @@
   }
 }
 
+@media screen and (min-width: $desktop) {
+  .hero-body > .container{ 
+    padding-left: 200px;
+  }
+}
+
+@media screen and (min-width: $desktop - 1px) {
+  .hl-main {
+  
+  }
+}
+
 @media screen and (max-width: $tablet - 1px) {
   .hl-main {
+    padding-top: 120px;
+
     &__actions { 
       display: flex;
       flex-direction: column;
