@@ -5,13 +5,13 @@ import './main.scss';
 class HomeMain extends Component {
   render() {
     return (
-      <section class="hl-main hero is-large">
-        <div class="hero-body">
-          <div class="container">
-            <h1 class="title">
+      <section className="hl-main hero is-large">
+        <div className="hero-body">
+          <div className="container">
+            <h1 className="title">
               Decore a sua casa com gosto
             </h1>
-            <h2 class="subtitle">
+            <h2 className="subtitle">
               fale connosco, nós ajudamos
             </h2>
             <div className="hl-main__actions">
