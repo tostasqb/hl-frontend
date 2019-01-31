@@ -19,7 +19,7 @@ class HomeMain extends Component {
               <span>ou</span>
               <a href="#" className="hl-main__secondary">Ver produtos</a>
             </div>
-            <h3>Venda só a profissionais</h3>
+            <h3>Exclusivo a Profissionais</h3>
           </div>
         </div>
       </section>
