@@ -4,13 +4,13 @@
 @import 'bulma/sass/layout/section.sass';
 
 .hl-footer {
-  background-color: #272727;
+  background-color: $footer-back;
   vertical-align: middle;
   font-size: 15px;
-  color: #E6E6E6;
+  color: $footer-text;
 
   a {
-    color: #E6E6E6;
+    color: $footer-text;
   }
 
   ul {
@@ -58,7 +58,7 @@
       display: block;
       text-align: center;
       font-size: .8em;
-      color: #777777;
+      color: $gray;
       padding: 20px 0;
     }
   }
