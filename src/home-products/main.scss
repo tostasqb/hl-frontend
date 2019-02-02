@@ -4,26 +4,23 @@
 @import 'bulma/sass/layout/section.sass';
 
 .hl-home-products {
+  margin-bottom: 40px;
+  
+  .hl-action {
+    text-align: center;
+  }
 
-}
-
-@media screen and (min-width: $desktop) {
-  .hl-home-products {
-    .hl-action {
-      text-align: center;
-    }
-
-    .hl-button {
-      padding: 8px 40px;
-      border: 1px solid $light-gray;
-      color: $gray;
-      display: inline-block;
-    }
+  .hl-button {
+    padding: 8px 40px;
+    border: 1px solid $light-gray;
+    color: $gray;
+    display: inline-block;
   }
 }
 
-@media screen and (min-width: $desktop - 1px) {
+@media screen and (max-width: $tablet - 1px) {
   .hl-home-products {
+    
   }
 }
 
