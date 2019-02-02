@@ -4,6 +4,7 @@ import HomeMain from './home-main';
 import HomeProducts from './home-products';
 import Footer from './footer';
 import Quote from './quote';
+import HomeAmbience from './home-ambience';
 
 class App extends Component {
   render() {
@@ -13,6 +14,7 @@ class App extends Component {
         <HomeMain />
         <HomeProducts />
         <Quote />
+        <HomeAmbience />
         <Footer />
       </div>
     );

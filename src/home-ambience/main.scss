@@ -1,0 +1,30 @@
+@import 'bulma/sass/utilities/_all.sass';
+@import '../common/variables.scss';
+
+@import 'bulma/sass/layout/section.sass';
+
+.hl-home-ambience {
+  margin-bottom: 40px;
+  
+  .hl-action {
+    text-align: center;
+  }
+
+  .hl-button {
+    padding: 8px 40px;
+    border: 1px solid $light-gray;
+    color: $gray;
+    display: inline-block;
+  }
+}
+
+@media screen and (max-width: $tablet - 1px) {
+  .hl-home-ambience {
+    
+  }
+}
+
+@media screen and (max-width: $tablet - 1px) {
+  .hl-home-ambience {
+  }
+}

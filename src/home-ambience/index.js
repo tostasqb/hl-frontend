@@ -1,14 +1,14 @@
 import React, { Component } from 'react';
 import './main.scss';
 
-class HomeProducts extends Component {
+class HomeAmbience extends Component {
   render() {
     return (
-      <section className="hl-home-products">
+      <section className="hl-home-ambience">
         <div className="container">
           <header className="hl-section-header">
-            <h3 className="hl-title">Produtos</h3>
-            <h4 className="hl-subtitle">Criamos e escolhemos marcas de confiança</h4>
+            <h3 className="hl-title">Ambientes</h3>
+            <h4 className="hl-subtitle">Porque é mais fácil ver as coisas num contexto</h4>
           </header>
 
           <div>
@@ -16,7 +16,7 @@ class HomeProducts extends Component {
           </div>
 
           <div className="hl-action">
-            <a href="#" className="hl-button">Ver produtos</a>
+            <a href="#" className="hl-button">Ver ambientes</a>
           </div>
         </div>
       </section>
@@ -24,4 +24,4 @@ class HomeProducts extends Component {
   }
 }
 
-export default HomeProducts;
+export default HomeAmbience;
