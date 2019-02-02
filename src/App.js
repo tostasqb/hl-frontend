@@ -3,6 +3,7 @@ import Header from './header';
 import HomeMain from './home-main';
 import HomeProducts from './home-products';
 import Footer from './footer';
+import Quote from './quote';
 
 class App extends Component {
   render() {
@@ -11,6 +12,7 @@ class App extends Component {
         <Header />
         <HomeMain />
         <HomeProducts />
+        <Quote />
         <Footer />
       </div>
     );
