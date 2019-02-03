@@ -40,6 +40,17 @@
 
 @media screen and (max-width: $tablet - 1px) {
   .hl-quote .wrapper {
+    padding: 40px 20px;
     margin-left: 0;
+
+    h3 {
+      line-height: 32px;
+      font-size: 26px;
+    }
+
+    h4 {
+      font-size: 19px;
+      line-height: 26px;
+    }
   }
 }
