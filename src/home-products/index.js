@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import './main.scss';
+import axios from 'axios';
 
 class HomeProducts extends Component {
   constructor(props) {
@@ -14,29 +15,38 @@ class HomeProducts extends Component {
   componentDidMount() {
     let endpoint = process.env.REACT_APP_API_URL + 'products';
 
-    fetch(endpoint)
-      .then(res => res.json())
-      .then(
-        (result) => {
-          this.setState({
-            isLoaded: true,
-            products: result
-          });
-        },
-        (error) => {
-          this.setState({
-            isLoaded: true,
-            error
-          });
-        }
-      )
+    axios.get(endpoint)
+      .then(res => {
+        this.setState({ 
+          isLoaded: true, 
+          products: res.data
+        })
+      }).catch(error => {
+        this.setState({ 
+          isLoaded: true, 
+          error
+        })
+      });
   }
 
   renderProduct(product) {
+    const imageStyle = {
+      backgroundImage: `url(https://placeimg.com/640/480/nature)`
+    }
+
     return(
-      <li key={`product-${product.id}`}>
-        {product.title}
-      </li>
+      <a href="#" className="column is-one-third-desktop" key={`product-${product.id}`}>
+        <div className="hl-product">
+          <div className="hl-product-image" style={imageStyle}></div>
+          <div className="hl-product-top">
+            <span className="hl-product-title">{product.title}</span>
+            <span className="hl-product-menu">{product.menu}</span>
+          </div>
+          <div className="hl-product-description">
+            {product.description}
+          </div>
+        </div>
+      </a>
     )
   }
 
@@ -55,7 +65,8 @@ class HomeProducts extends Component {
               <h3 className="hl-title">Produtos</h3>
               <h4 className="hl-subtitle">Criamos e escolhemos marcas de confiança</h4>
             </header>
-            <div>
+
+            <div className="columns">
               {products.map(product => (
                 this.renderProduct(product)
               ))}
