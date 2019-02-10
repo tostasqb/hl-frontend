@@ -57,21 +57,8 @@
   }
 }
 
-@media screen and (min-width: $desktop) {
-  .hl-home-products {
-    .column {
-      flex: initial;
-    }
-  }
-}
-
 @media screen and (max-width: $tablet - 1px) {
   .hl-home-products {
     
-  }
-}
-
-@media screen and (max-width: $tablet - 1px) {
-  .hl-home-products {
   }
 }

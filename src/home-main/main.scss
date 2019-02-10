@@ -52,7 +52,6 @@
   &__primary {
     background-color: $main;
     padding: 10px 45px;
-    border-radius: 12px;
     font-size: 18px;
     color: $white;
     margin-right: 20px;
@@ -60,9 +59,8 @@
 
   &__secondary {
     background-color: $white;
-    border-radius: 12px;
-    color: $main;
-    border: 1px solid $main;
+    border: 1px solid $light-gray;
+    color: $gray;
     padding: 6px 30px;
     font-size: 13px;
     margin-left: 20px;
