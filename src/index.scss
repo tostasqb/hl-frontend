@@ -22,12 +22,6 @@ a {
   }
 }
 
-@media screen and (min-width: $desktop) {
-  .column {
-    flex: initial;
-  }
-}
-
 @media screen and (max-width: $tablet - 1px) {
   .columns {
     margin: 0;

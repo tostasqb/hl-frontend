@@ -57,8 +57,10 @@
   }
 }
 
-@media screen and (max-width: $tablet - 1px) {
+@media screen and (min-width: $desktop) {
   .hl-home-products {
-    
+    .column {
+      flex: initial;
+    }
   }
 }
