@@ -16,6 +16,17 @@
     color: $gray;
     display: inline-block;
   }
+
+  .hl-ambience-image {
+    height: 270px;
+    background-size: cover;
+    background-color: $background-gray;
+    transition: all .4s ease-in-out;
+
+    &:hover {
+      // transform: scale(1.02);
+    }
+  }
 }
 
 @media screen and (max-width: $tablet - 1px) {
@@ -26,5 +37,13 @@
 
 @media screen and (max-width: $tablet - 1px) {
   .hl-home-ambience {
+  }
+}
+
+@media screen and (min-width: $desktop) {
+  .hl-home-ambience {
+    .column {
+      flex: initial;
+    }
   }
 }
