@@ -18,17 +18,18 @@
   }
 
   .hl-product {
-    border: 1px solid #D9D9D9;
+    border: 1px solid $border-gray;
     overflow: hidden;
   }
 
   .hl-product-image {
-    height: 250px;
+    height: 270px;
     background-size: cover;
+    background-color: $background-gray;
     transition: all .4s ease-in-out;
 
     &:hover {
-      transform: scale(1.02);
+      // transform: scale(1.02);
     }
   }
 
