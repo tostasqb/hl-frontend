@@ -2,6 +2,13 @@ import React, { Component } from 'react';
 import logo from './logo.jpg';
 import './header.scss';
 
+import $ from 'jquery';
+window.jQuery = window.$ = $;
+
+$(window).scroll(function(){
+  $('.hl-header').toggleClass('mini', $(document).scrollTop() > 0);
+});
+
 class Header extends Component {
   render() {
     return (

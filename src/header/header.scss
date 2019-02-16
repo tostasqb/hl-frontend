@@ -7,6 +7,8 @@
 
 .hl-header {
   // padding: 40px 30px 20px;
+  border-bottom: none;
+  border-bottom-color: #FFFFFF;
 
   .navbar-menu a.navbar-item {
     text-transform: uppercase;
@@ -23,10 +25,12 @@
   .hl-logo {
     max-height: 80px;
     padding: 20px 0;
+    transition: all 0.5s ease;
   }
 
   .logo-text-wrapper {
     margin-top: -13px;
+    transition: all 0.5s ease;
   }
 
   .logo-text-name,
@@ -41,6 +45,23 @@
   .logo-text-name {
     color: $main;
     font-size: 1.2em;
+  }
+}
+
+@media screen and (min-width: $desktop) {
+  .hl-header.mini {
+    border-bottom: 1px solid #efefef;
+    transition: border 0.5s ease;
+
+    .hl-logo {
+      max-height: 35px;
+      padding: 5px 10px 0 0;
+    }
+
+    .logo-text-wrapper {
+      margin-top: 0;
+      font-size: .9em;
+    }
   }
 }
 
