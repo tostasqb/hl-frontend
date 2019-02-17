@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom';
 import React, { Component } from 'react';
 import './main.scss';
 
@@ -9,9 +10,9 @@ class Footer extends Component {
       <footer className="hl-footer">
         <div className="container">
           <ul className="">
-            <li><a href="#">Facebook</a></li>
-            <li><a href="#">Contactos</a></li>
-            <li><a href="#">Termos e Condições</a></li>
+            <li><a href="https://web.facebook.com/highlinehomedecoration/">Facebook</a></li>
+            <li><Link to="/contacts">Contactos</Link></li>
+            <li><Link to="/terms">Termos e Condições</Link></li>
           </ul>
           
           <span className="hl-copyright">

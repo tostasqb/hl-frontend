@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom';
 import React, { Component } from 'react';
 // import img_main from './homepage.jpg';
 import './main.scss';
@@ -15,9 +16,9 @@ class HomeMain extends Component {
               fale connosco, nós ajudamos
             </h2>
             <div className="hl-main__actions">
-              <a href="#" className="hl-main__primary">Contacte-nos</a> 
+              <Link to="/contacts" className="hl-main__primary">Contacte-nos</Link>
               <span>ou</span>
-              <a href="#" className="hl-main__secondary">Ver produtos</a>
+              <Link to="/products" className="hl-main__secondary">Ver produtos</Link>
             </div>
             <h3>Exclusivo a Profissionais</h3>
           </div>

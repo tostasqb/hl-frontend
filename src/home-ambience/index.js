@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom';
 import React, { Component } from 'react';
 import './main.scss';
 import axios from 'axios';
@@ -35,11 +36,11 @@ class HomeAmbience extends Component {
     }
 
     return(
-      <a href="#" className="column is-one-quarter-desktop" key={`ambience-${ambience.id}`}>
+      <div className="column is-one-quarter-desktop" key={`ambience-${ambience.id}`}>
         <div className="hl-ambience">
           <div className="hl-ambience-image" style={imageStyle}></div>
         </div>
-      </a>
+      </div>
     )
   }
 
@@ -66,7 +67,7 @@ class HomeAmbience extends Component {
             </div>
 
             <div className="hl-action">
-              <a href="#" className="hl-button">Ver ambientes</a>
+              <Link to="/ambiences" className="hl-button">Ver ambientes</Link>
             </div>
           </div>
         </section>

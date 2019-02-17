@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom';
 import React, { Component } from 'react';
 import logo from './logo.jpg';
 import './header.scss';
@@ -15,13 +16,13 @@ class Header extends Component {
       <nav className="hl-header navbar is-fixed-top is-transparent">
         <div className="container">
           <div className="navbar-brand animated pulse">
-            <a className="navbar-item" data-anchor="page-top" data-active="false">
+            <Link to="/" className="navbar-item" data-anchor="page-top" data-active="false">
               <img src={logo} className="hl-logo" alt="logo HighLine" />
               <div className="logo-text-wrapper">
                 <span className="logo-text-name">High Line</span>
                 <span className="logo-text-line">home decoration</span>
               </div>
-            </a>
+            </Link>
             <span className="navbar-burger burger animated pulse" data-target="navbarMenu">
               <span></span>
               <span></span>
@@ -31,18 +32,18 @@ class Header extends Component {
 
           <div id="navbarMenu" className="navbar-menu">
             <div className="navbar-end">
-              <a className="navbar-item" data-anchor="expertise">
+              <Link to="/products" className="navbar-item" data-anchor="products">
                 produtos
-              </a>
-              <a className="navbar-item" data-anchor="produtos">
+              </Link>
+              <Link to="/ambiences" className="navbar-item" data-anchor="ambiences">
                 ambientes
-              </a>
-              <a className="navbar-item" data-anchor="clientes">
+              </Link>
+              <Link to="/about" className="navbar-item" data-anchor="about">
                 sobre nós
-              </a>
-              <a className="navbar-item" data-anchor="contato">
+              </Link>
+              <Link to="/contacts" className="navbar-item" data-anchor="contact">
                 contatos
-              </a>
+              </Link>
             </div>
           </div>
         </div>

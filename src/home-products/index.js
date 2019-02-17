@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom';
 import React, { Component } from 'react';
 import './main.scss';
 import axios from 'axios';
@@ -73,7 +74,7 @@ class HomeProducts extends Component {
             </div>
 
             <div className="hl-action">
-              <a href="#" className="hl-button">Ver produtos</a>
+              <Link to="/products" className="hl-button">Ver produtos</Link>
             </div>
           </div>
         </section>

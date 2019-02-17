@@ -5,6 +5,15 @@
 
 .hl-home-ambience {
   margin-bottom: 40px;
+
+  .hl-ambience {
+    cursor: pointer;
+
+    &:hover {
+      opacity: .9;
+      transition: opacity .2s ease-in-out  
+    }
+  }
   
   .hl-action {
     text-align: center;
