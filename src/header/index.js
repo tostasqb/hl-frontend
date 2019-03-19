@@ -42,7 +42,7 @@ class Header extends Component {
                 sobre nós
               </Link>
               <Link to="/contacts" className="navbar-item" data-anchor="contact">
-                contatos
+                contactos
               </Link>
             </div>
           </div>

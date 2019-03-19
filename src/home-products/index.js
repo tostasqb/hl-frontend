@@ -32,7 +32,7 @@ class HomeProducts extends Component {
 
   renderProduct(product) {
     const imageStyle = {
-      backgroundImage: `url(https://placeimg.com/640/480/nature)`
+      backgroundImage: `url(${product.image})`
     }
 
     return(

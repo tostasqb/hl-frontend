@@ -32,7 +32,7 @@ class HomeAmbience extends Component {
 
   renderAmbience(ambience) {
     const imageStyle = {
-      backgroundImage: `url(https://placeimg.com/640/480/nature)`
+      backgroundImage: `url(${ambience.image})`
     }
 
     return(
