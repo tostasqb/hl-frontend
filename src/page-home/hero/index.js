@@ -3,7 +3,7 @@ import React, { Component } from 'react';
 // import img_main from './homepage.jpg';
 import './main.scss';
 
-class HomeMain extends Component {
+class HomeHero extends Component {
   render() {
     return (
       <section className="hl-main hero is-large">
@@ -28,4 +28,4 @@ class HomeMain extends Component {
   }
 }
 
-export default HomeMain;
+export default HomeHero;

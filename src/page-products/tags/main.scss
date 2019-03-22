@@ -1,0 +1,96 @@
+@import 'bulma/sass/utilities/_all.sass';
+@import '../../common/variables.scss';
+
+@import 'bulma/sass/layout/section.sass';
+
+.hl-tags {
+  font-family: $font-secondary;
+  margin-bottom: 30px;
+
+  .hl-title { 
+    font-weight: bold;
+    font-size: 13px;
+    text-transform: uppercase;
+    color: #4D4D4D;
+    padding: 25px 5px 15px 5px;
+  }
+
+  ul.hl-tag-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+
+    li {
+      padding: 4px;
+      color: #737373;
+      font-size: 15px;
+    }
+  }
+
+  .hl-tag-checkbox { 
+    margin-right: 10px;
+  }
+
+  // Custum checkbox styles //
+
+  /* Customize the label (the container) */
+  .hl-label {
+    display: block;
+    position: relative;
+    padding-left: 23px;
+    cursor: pointer;
+    user-select: none;
+  }
+
+  /* Hide the browser's default checkbox */
+  .hl-label input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    height: 0;
+    width: 0;
+  }
+
+  /* Create a custom checkbox */
+  .checkmark {
+    position: absolute;
+    top: 3px;
+    left: 0;
+    height: 11px;
+    width: 11px;
+    border: 1px solid #b1b1b1;
+    background-color: #fff;
+    transition: all .2s ease-in-out;
+  }
+
+  /* When the checkbox is checked, add a blue background */
+  .hl-label input:checked ~ .checkmark {
+    background-color: #ffffff;
+    border: 1px solid #b1b1b1;
+  }
+
+  /* Create the checkmark/indicator (hidden when not checked) */
+  .checkmark:after {
+    content: "";
+    position: absolute;
+    display: none;
+  }
+
+  /* Show the checkmark when checked */
+  .hl-label input:checked ~ .checkmark:after {
+    display: block;
+  }
+
+  /* Style the checkmark/indicator */
+  .hl-label .checkmark:after {
+    left: 3px;
+    top: 3px;
+    width: 5px;
+    height: 5px;
+    background-color: #b1b1b1;
+  }
+}
+
+@media screen and (min-width: $desktop) {
+
+}

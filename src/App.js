@@ -2,28 +2,31 @@ import { BrowserRouter as Router, Route } from 'react-router-dom';
 import React, { Component } from 'react';
 
 import Header from './header';
-import HomeMain from './home-main';
-import HomeProducts from './home-products';
 import Footer from './footer';
-import Quote from './quote';
-import HomeAmbience from './home-ambience';
+
+import HomeHero from './page-home/hero';
+import HomeProducts from './page-home/products';
+import HomeQuote from './page-home/quote';
+import HomeAmbience from './page-home/ambience';
+
+import ProductsMain from './page-products/main'
 
 class App extends Component {
   render() {
     return (
       <Router>
-        <div>
+        <React.Fragment>
           <Header />
-          <div>
-            <Route exact path="/" component={Home} />
-            <Route exact path="/products" component={Products} />
-            <Route exact path="/ambiences" component={Ambiences} />
-            <Route exact path="/about" component={About} />
-            <Route exact path="/contact" component={Contact} />
-            <Route exact path="/terms" component={Terms} />
-          </div>
+            <React.Fragment>
+              <Route exact path="/" component={Home} />
+              <Route exact path="/products" component={Products} />
+              <Route exact path="/ambiences" component={Ambiences} />
+              <Route exact path="/about" component={About} />
+              <Route exact path="/contact" component={Contact} />
+              <Route exact path="/terms" component={Terms} />
+            </React.Fragment>
           <Footer />
-        </div>
+        </React.Fragment>
       </Router>
     );
   }
@@ -31,16 +34,16 @@ class App extends Component {
 
 const Home = () => (
   <div className="hl-page-home">
-    <HomeMain />
+    <HomeHero />
     <HomeProducts />
-    <Quote />
+    <HomeQuote />
     <HomeAmbience />
   </div>
 )
 
 const Products = () => (
   <div className="hl-page-products">
-
+    <ProductsMain />    
   </div>
 )
 
