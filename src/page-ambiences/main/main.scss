@@ -3,22 +3,10 @@
 
 @import 'bulma/sass/layout/section.sass';
 
-.hl-page-products {
+.hl-page-ambiences {
   height: auto;
   overflow: hidden;
   padding-top: 136px;
-  min-height: 500px;
-     
- .left {
-     width: 240px;
-     float: left;
- }
- 
- .right {
-     float: none;
-     width: auto;
-     overflow: hidden;
- }
 }
 
 @media screen and (min-width: $desktop) {

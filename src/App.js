@@ -10,6 +10,7 @@ import HomeQuote from './page-home/quote';
 import HomeAmbience from './page-home/ambience';
 
 import ProductsMain from './page-products/main'
+import AmbiencesMain from './page-ambiences/main'
 
 class App extends Component {
   render() {
@@ -49,7 +50,7 @@ const Products = () => (
 
 const Ambiences = () => (
   <div className="hl-page-ambiences">
-    Ambiences
+    <AmbiencesMain />    
   </div>
 )
 
