@@ -51,7 +51,7 @@ class ProductTags extends Component {
       <li className="hl-tag-item" key={`tag-${tag.id}`}>
         <label className="hl-label">
           <input type="checkbox" name={tag.name} className="hl-tag-checkbox" />
-          <span class="checkmark"></span>
+          <span className="checkmark"></span>
           {tag.name}
         </label>
       </li>

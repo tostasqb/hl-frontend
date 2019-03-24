@@ -1,19 +1,61 @@
 import React, { Component } from 'react';
 import './main.scss';
+import axios from 'axios';
 
 import ProductTags from '../tags'
+import ProductGrid from '../product-grid'
+
 
 class ProductsMain extends Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      error: null,
+      isLoaded: false,
+      products: []
+    };
+  }
+
+  componentDidMount() {
+    let endpoint = process.env.REACT_APP_API_URL + 'products';
+
+    axios.get(endpoint, {
+      params: {
+        per_page: 30,
+        page: 1
+      }
+    }).then(res => {
+      this.setState({ 
+        isLoaded: true, 
+        products: res.data
+      })
+    }).catch(error => {
+      this.setState({ 
+        isLoaded: true, 
+        error
+      })
+    });
+  }
+
   render() {
-    return (
-      <div className="container">
-        <div className="left">
-          <ProductTags />
+    const { error, isLoaded, products } = this.state;
+
+    if (error) {
+      return <div>Error: {error.message}</div>;
+    } else if (!isLoaded) {
+      return <div>Loading...</div>;
+    } else {
+      return (
+        <div className="container">
+          <div className="left">
+            <ProductTags />
+          </div>
+          <div className="right">
+            <ProductGrid products={products} />
+          </div>
         </div>
-        <div className="right">
-        </div>
-      </div>
-    )
+      )
+    }
   }
 }
 

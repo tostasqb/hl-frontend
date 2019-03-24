@@ -3,18 +3,20 @@
 
 @import 'bulma/sass/layout/section.sass';
 
-.hl-home-products {
+.hl-grid-products {
   margin-bottom: 40px;
 
-  .hl-action {
-    text-align: center;
+  .hl-columns {
+    display: flex;
+    flex-wrap: wrap;
   }
 
-  .hl-button {
-    padding: 8px 40px;
-    border: 1px solid $light-gray;
-    color: $gray;
-    display: inline-block;
+  .hl-column {
+    flex: 1 0 25%;
+    box-sizing: border-box;
+    margin: 5px;
+    flex-direction: row;
+    max-width: calc(33% - 10px);
   }
 
   .hl-product {
@@ -23,7 +25,7 @@
   }
 
   .hl-product-image {
-    height: 270px;
+    height: 200px;
     background-size: cover;
     background-color: $background-gray;
     background-position: center;
@@ -53,20 +55,29 @@
   }
 
   .hl-product-description {
-    padding: 0 5px 15px 15px;
+    padding: 0 10px 15px 15px;
+    font-size: 12px;
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
-    font-size: 14px;
     color: #777;
-    min-height: 19px;
+    min-height: 17px;
   }
 }
 
 @media screen and (min-width: $desktop) {
-  .hl-home-products {
+  .hl-grid-products {
     .column {
       flex: initial;
+    // box-sizing: border-box;
+    }
+  }
+}
+
+@media screen and (min-width: $fullhd) {
+  .hl-grid-products {
+    .hl-product-image {
+      height: 270px;
     }
   }
 }

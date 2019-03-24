@@ -9,7 +9,7 @@
   padding-top: 136px;
      
  .left {
-     width: 280px;
+     width: 240px;
      float: left;
  }
  
@@ -22,4 +22,14 @@
 
 @media screen and (min-width: $desktop) {
 
+}
+
+
+// HEADER OVERRIDES FOR THIS PAGE
+.hl-header .hl-logo {
+  max-height: 60px;
+}
+
+.hl-header .logo-text-wrapper {
+  margin-top: -6px;
 }
