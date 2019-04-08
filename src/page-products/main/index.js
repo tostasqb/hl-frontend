@@ -46,14 +46,25 @@ class ProductsMain extends Component {
       return <div>Loading...</div>;
     } else {
       return (
-        <div className="container">
-          <div className="left">
-            <ProductTags />
+        <React.Fragment>
+          <div className="page-title">
+            <div className="wrapper">
+              <h1>Os nossos produtos</h1>
+              <h2>Todas as nossas colecções num sítio só</h2>
+            </div>
           </div>
-          <div className="right">
-            <ProductGrid products={products} />
+
+          <div className="gray-wrapper">
+            <div className="container gray">
+              <div className="left">
+                <ProductTags />
+              </div>
+              <div className="right">
+                <ProductGrid products={products} />
+              </div>
+            </div>
           </div>
-        </div>
+        </React.Fragment>
       )
     }
   }

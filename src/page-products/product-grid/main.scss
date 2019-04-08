@@ -20,12 +20,13 @@
   }
 
   .hl-product {
-    border: 1px solid $border-light-gray;
+    background-color: #fff;
+    border: 1px solid #e4e4e4;
     overflow: hidden;
   }
 
   .hl-product-image {
-    height: 200px;
+    height: 250px;
     background-size: cover;
     background-color: $background-gray;
     background-position: center;
