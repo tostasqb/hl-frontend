@@ -1,23 +1,12 @@
 @import 'bulma/sass/utilities/_all.sass';
-@import '../../common/variables.scss';
+@import '../common/variables.scss';
 
 @import 'bulma/sass/layout/section.sass';
 
-.hl-page-products {
+.hl-page-about-us {
   height: auto;
   overflow: hidden;
   padding-top: 136px;
-
- .left {
-     width: 240px;
-     float: left;
- }
- 
- .right {
-     float: none;
-     width: auto;
-     overflow: hidden;
- }
 }
 
 @media screen and (min-width: $desktop) {

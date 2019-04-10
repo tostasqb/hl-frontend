@@ -12,6 +12,9 @@ import HomeAmbience from './page-home/ambience';
 import ProductsMain from './page-products/main'
 import AmbiencesMain from './page-ambiences/main'
 
+import AboutUs from './page-about-us'
+import ContactUs from './page-contact-us'
+
 class App extends Component {
   render() {
     return (
@@ -23,8 +26,7 @@ class App extends Component {
               <Route exact path="/products" component={Products} />
               <Route exact path="/ambiences" component={Ambiences} />
               <Route exact path="/about" component={About} />
-              <Route exact path="/contact" component={Contact} />
-              <Route exact path="/terms" component={Terms} />
+              <Route exact path="/contacts" component={Contact} />
             </React.Fragment>
           <Footer />
         </React.Fragment>
@@ -55,20 +57,14 @@ const Ambiences = () => (
 )
 
 const About = () => (
-  <div className="hl-page-about">
-    About
+  <div className="hl-page-about-us">
+    <AboutUs />
   </div>
 )
 
 const Contact = () => (
-  <div className="hl-page-contact">
-    Contact
-  </div>
-)
-
-const Terms = () => (
-  <div className="hl-page-terms">
-    Terms and Conditions
+  <div className="hl-page-contact-us">
+    <ContactUs />
   </div>
 )
 

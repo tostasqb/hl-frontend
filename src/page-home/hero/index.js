@@ -10,7 +10,7 @@ class HomeHero extends Component {
         <div className="hero-body">
           <div className="container">
             <h1 className="title">
-              Decore a sua casa com gosto
+            Personalizamos o seu projecto de decoração
             </h1>
             <h2 className="subtitle">
               fale connosco, nós ajudamos
