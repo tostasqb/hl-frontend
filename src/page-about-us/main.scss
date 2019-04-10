@@ -7,7 +7,54 @@
   height: auto;
   overflow: hidden;
   padding-top: 136px;
+
+  .container.gray {
+    font-family: $font-secondary;
+    color: #5d5d5d;
+    font-size: 17px;
+    font-weight: 200;
+    line-height: 24px;
+    max-width: 850px;
+    padding: 20px;
+
+    p {
+      margin: 30px 0;
+    }
+
+    h1, h2, h3, h4, h5 {
+      text-transform: uppercase;
+      color: #3e3e3e;
+    }
+
+    h1 {
+      font-size: 17px;
+
+      &:after {
+        content: " ";
+        position: absolute;
+        height: 3px;
+        width: 23px;
+        background: $main;
+        left: 22px;
+        margin-top: 28px;
+      }
+    }
+
+    h2 {
+      font-size: 16px;
+    }
+
+    h3 {
+      font-size: 14px;
+    }
+
+    h4 {
+      font-size: 12px;
+    }
+  }
 }
+
+
 
 @media screen and (min-width: $desktop) {
 
