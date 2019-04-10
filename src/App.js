@@ -14,6 +14,7 @@ import AmbiencesMain from './page-ambiences/main'
 
 import AboutUs from './page-about-us'
 import ContactUs from './page-contact-us'
+import TermsConditions from './page-terms'
 
 class App extends Component {
   render() {
@@ -27,6 +28,7 @@ class App extends Component {
               <Route exact path="/ambiences" component={Ambiences} />
               <Route exact path="/about" component={About} />
               <Route exact path="/contacts" component={Contact} />
+              <Route exact path="/terms" component={Terms} />
             </React.Fragment>
           <Footer />
         </React.Fragment>
@@ -65,6 +67,12 @@ const About = () => (
 const Contact = () => (
   <div className="hl-page-contact-us">
     <ContactUs />
+  </div>
+)
+
+const Terms = () => (
+  <div className="hl-page-terms">
+    <TermsConditions />
   </div>
 )
 
