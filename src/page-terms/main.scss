@@ -28,7 +28,8 @@
 
     h1 {
       font-size: 17px;
-
+      display: inline-block;
+      
       &:after {
         content: " ";
         position: absolute;
