@@ -2,26 +2,31 @@ import React, { Component } from 'react';
 import './main.scss';
 import axios from 'axios';
 
-class Terms extends Component {
+import AmbienceGrid from './ambience-grid'
+
+
+class AmbiencesMain extends Component {
   constructor(props) {
     super(props);
     this.state = {
       error: null,
       isLoaded: false,
-      terms: []
+      ambiences: []
     };
   }
 
   componentDidMount() {
-    let endpoint = process.env.REACT_APP_API_URL + 'pieces';
+    let endpoint = process.env.REACT_APP_API_URL + 'ambiences';
+
     axios.get(endpoint, {
       params: {
-        piece: ['terms']
+        per_page: 30,
+        page: 1
       }
     }).then(res => {
       this.setState({ 
         isLoaded: true, 
-        terms: res.data
+        ambiences: res.data
       })
     }).catch(error => {
       this.setState({ 
@@ -32,8 +37,8 @@ class Terms extends Component {
   }
 
   render() {
-    const { error, isLoaded, terms } = this.state;
-    
+    const { error, isLoaded, ambiences } = this.state;
+
     if (error) {
       return <div>Error: {error.message}</div>;
     } else if (!isLoaded) {
@@ -43,13 +48,15 @@ class Terms extends Component {
         <React.Fragment>
           <div className="page-title">
             <div className="wrapper">
-              <h1>Termos e condições</h1>
-              <h2>Termos da utilização do website</h2>
+              <h1>Ambientes</h1>
+              <h2>Um ambiente feito de pequenas coisas</h2>
             </div>
           </div>
 
           <div className="gray-wrapper">
-            <div className="container gray" dangerouslySetInnerHTML={{ __html: terms['terms'] }} />
+            <div className="container gray">
+              <AmbienceGrid ambiences={ambiences} />
+            </div>
           </div>
         </React.Fragment>
       )
@@ -57,4 +64,4 @@ class Terms extends Component {
   }
 }
 
-export default Terms;
+export default AmbiencesMain;

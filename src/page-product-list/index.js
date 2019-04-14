@@ -2,11 +2,11 @@ import React, { Component } from 'react';
 import './main.scss';
 import axios from 'axios';
 
-import ProductTags from '../tags'
-import ProductGrid from '../product-grid'
+import ProductTags from './tags'
+import ProductGrid from './product-grid'
 
 
-class ProductsMain extends Component {
+class ProductList extends Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -70,4 +70,4 @@ class ProductsMain extends Component {
   }
 }
 
-export default ProductsMain;
+export default ProductList;

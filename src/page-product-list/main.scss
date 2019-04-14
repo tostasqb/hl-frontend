@@ -1,5 +1,5 @@
 @import 'bulma/sass/utilities/_all.sass';
-@import '../../common/variables.scss';
+@import '../common/variables.scss';
 
 @import 'bulma/sass/layout/section.sass';
 
@@ -20,6 +20,8 @@
  }
 }
 
-@media screen and (min-width: $desktop) {
-
+@media screen and (max-width: $tablet) {
+  .hl-page-products {
+    padding-top: 80px;
+  }
 }

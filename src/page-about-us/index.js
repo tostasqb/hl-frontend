@@ -16,7 +16,7 @@ class AboutUs extends Component {
     let endpoint = process.env.REACT_APP_API_URL + 'pieces';
     axios.get(endpoint, {
       params: {
-        piece: 'about-us'
+        piece: ['about-us']
       }
     }).then(res => {
       this.setState({ 
@@ -39,7 +39,6 @@ class AboutUs extends Component {
     } else if (!isLoaded) {
       return <div>Loading...</div>;
     } else {
-      let html = aboutUs[0] == null ? '' : aboutUs[0].value;
       return (
         <React.Fragment>
           <div className="page-title">
@@ -50,7 +49,7 @@ class AboutUs extends Component {
           </div>
 
           <div className="gray-wrapper">
-            <div className="container gray" dangerouslySetInnerHTML={{ __html: html }} />
+            <div className="container gray" dangerouslySetInnerHTML={{ __html: aboutUs['about-us'] }} />
           </div>
         </React.Fragment>
       )

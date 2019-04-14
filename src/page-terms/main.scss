@@ -55,8 +55,8 @@
   }
 }
 
-
-
-@media screen and (min-width: $desktop) {
-
+@media screen and (max-width: $tablet) {
+  .hl-page-terms {
+    padding-top: 80px;
+  }
 }
