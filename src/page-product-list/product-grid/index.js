@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { Link } from 'react-router-dom';
 import { arrayOf, object } from 'prop-types';
 import './main.scss';
 
@@ -18,7 +19,7 @@ class ProductGrid extends Component {
     }
 
     return(
-      <a href={`/product/${product.id}/${this.slugify(product.title)}`} className="hl-column" key={`product-${product.id}`}>
+      <Link to={`/product/${product.id}/${this.slugify(product.title)}`} className="hl-column" key={`product-${product.id}`}>
         <div className="hl-product">
           <div className="hl-product-image" style={imageStyle}></div>
           <div className="hl-product-top">
@@ -29,7 +30,7 @@ class ProductGrid extends Component {
             {product.description}
           </div>
         </div>
-      </a>
+      </Link>
     )
   }
 

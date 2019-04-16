@@ -16,7 +16,7 @@ class Product extends Component {
     let endpoint = process.env.REACT_APP_API_URL + 'product';
     axios.get(endpoint, {
       params: {
-        piece: 'contact-us'
+        id: window.location.pathname.split('/')[2]
       }
     }).then(res => {
       this.setState({ 
@@ -31,6 +31,18 @@ class Product extends Component {
     });
   }
 
+  renderImages() {
+    return (
+      <div className="hl-product-image">
+        {/* <img src={this.state.product.image} /> */}
+        
+        {this.state.product.more_images.map(image => (
+          <img key={image.id} src={image.url} />
+        ))}
+      </div>
+    )
+  }
+
   render() {
     const { error, isLoaded, product } = this.state;
 
@@ -42,16 +54,12 @@ class Product extends Component {
       
       return (
         <React.Fragment>
-          <div className="page-title">
-            <div className="wrapper">
-              <h1>Detalhes</h1>
-              <h2>Product Name</h2>
-            </div>
-          </div>
-
-          <div className="gray-wrapper">
-            <div className="container gray">
-              <div dangerouslySetInnerHTML={{ __html: html }} />
+          <div className="hl-product-wrapper container">
+            {this.renderImages()}
+            <div className="hl-product-description-wrapper">
+              <h1>{product.title}</h1>
+              <div className="hl-product-description" dangerouslySetInnerHTML={{ __html: product.description }} />
+              <a className="hl-ask-for-info" href="mailto:geral@highline.com.pt">Pedir + Informação</a>
             </div>
           </div>
         </React.Fragment>

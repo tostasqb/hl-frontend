@@ -1,0 +1,50 @@
+@import 'bulma/sass/utilities/_all.sass';
+@import '../common/variables.scss';
+
+@import 'bulma/sass/layout/section.sass';
+
+.hl-page-product {
+  height: auto;
+  overflow: hidden;
+  padding-top: 136px;
+  color: #737373;
+  font-size: 14px;
+  
+  h1 {
+    font-family: Muli;
+    font-weight: 100;
+    text-transform: uppercase;
+    letter-spacing: -1px;
+  }
+
+  .hl-ask-for-info {
+    background-color: #D9147F;
+    padding: 15px 50px;
+    color: #fff;
+    display: inline-block;
+    text-transform: uppercase;
+    font-size: 14px;
+    margin-top: 40px;
+  }
+
+  .hl-product-wrapper {
+    display: flex;
+
+    img { width: 100%; }
+  }
+
+  .hl-product-description-wrapper,
+  .hl-product-image {
+    box-sizing: border-box;
+    display: inline-block;
+    width: 50%;
+    vertical-align: top;
+    margin: 30px;
+  }
+}
+
+@media screen and (max-width: $tablet) {
+  .hl-page-product {
+    padding-top: 80px;
+  }
+}

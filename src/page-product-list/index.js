@@ -47,6 +47,7 @@ class ProductList extends Component {
     } else {
       return (
         <React.Fragment>
+
           <div className="page-title">
             <div className="wrapper">
               <h1>Os nossos produtos</h1>

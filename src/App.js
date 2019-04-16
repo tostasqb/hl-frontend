@@ -10,11 +10,12 @@ import HomeQuote from './page-home/quote';
 import HomeAmbience from './page-home/ambience';
 
 import ProductList from './page-product-list';
+import Product from './page-product';
 import Ambiences from './page-ambiences';
 
 import AboutUs from './page-about-us';
 import ContactUs from './page-contact-us';
-import TermsConditions from './page-terms';
+import Terms from './page-terms';
 
 class App extends Component {
   render() {
@@ -29,6 +30,7 @@ class App extends Component {
               <Route exact path="/about" component={LinkAbout} />
               <Route exact path="/contacts" component={LinkContactUs} />
               <Route exact path="/terms" component={LinkTerms} />
+              <Route path="/product/:productid/:slug" component={LinkProduct} />
             </React.Fragment>
           <Footer />
         </React.Fragment>
@@ -72,7 +74,13 @@ const LinkContactUs = () => (
 
 const LinkTerms = () => (
   <div className="hl-page-terms">
-    <TermsConditions />
+    <Terms />
+  </div>
+)
+
+const LinkProduct = () => (
+  <div className="hl-page-product">
+    <Product />
   </div>
 )
 
