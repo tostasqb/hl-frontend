@@ -8,6 +8,7 @@ import HomeHero from './page-home/hero';
 import HomeProducts from './page-home/products';
 import HomeQuote from './page-home/quote';
 import HomeAmbience from './page-home/ambience';
+import HomePartners from './page-home/partners';
 
 import ProductList from './page-product-list';
 import Product from './page-product';
@@ -45,6 +46,7 @@ const LinkHome = () => (
     <HomeProducts />
     <HomeQuote />
     <HomeAmbience />
+    <HomePartners />
   </div>
 )
 
