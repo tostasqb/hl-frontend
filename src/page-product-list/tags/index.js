@@ -6,11 +6,18 @@ import axios from 'axios';
 class ProductTags extends Component {
   constructor(props) {
     super(props);
+
+    this.handleChange = this.handleChange.bind(this);
+
     this.state = {
       error: null,
       isLoaded: false,
       json: []
     };
+  }
+
+  handleChange(e) {
+    this.props.onTagChange(e);
   }
 
   componentDidMount() {
@@ -50,7 +57,11 @@ class ProductTags extends Component {
     return(
       <li className="hl-tag-item" key={`tag-${tag.id}`}>
         <label className="hl-label">
-          <input type="checkbox" name={tag.name} className="hl-tag-checkbox" />
+          <input type="checkbox" 
+                 name={tag.name} 
+                 className="hl-tag-checkbox"
+                 checked={this.state[tag.name]}
+                 onChange={this.handleChange} />
           <span className="checkmark"></span>
           {tag.name}
         </label>

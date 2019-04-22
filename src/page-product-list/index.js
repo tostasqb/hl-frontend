@@ -9,11 +9,26 @@ import ProductGrid from './product-grid'
 class ProductList extends Component {
   constructor(props) {
     super(props);
+
     this.state = {
       error: null,
       isLoaded: false,
-      products: []
+      products: [],
+      filter: {}
     };
+
+    this.handleTagChange = this.handleTagChange.bind(this);
+  }
+
+  handleTagChange(event) {
+    const target = event.target;
+    const value = target.type === 'checkbox' ? target.checked : target.value;
+    const name = target.name;
+
+    let filter = Object.assign({}, this.state.filter);    //creating copy of object
+    filter[name] = value;
+
+    this.setState({ filter: filter });
   }
 
   componentDidMount() {
@@ -47,7 +62,6 @@ class ProductList extends Component {
     } else {
       return (
         <React.Fragment>
-
           <div className="page-title">
             <div className="wrapper">
               <h1>Os nossos produtos</h1>
@@ -58,7 +72,7 @@ class ProductList extends Component {
           <div className="gray-wrapper">
             <div className="container gray">
               <div className="left">
-                <ProductTags />
+                <ProductTags onTagChange={this.handleTagChange} />
               </div>
               <div className="right">
                 <ProductGrid products={products} />
