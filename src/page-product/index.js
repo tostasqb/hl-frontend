@@ -35,9 +35,11 @@ class Product extends Component {
     return (
       <div className="hl-product-image">
         {/* <img src={this.state.product.image} /> */}
-        
         {this.state.product.more_images.map(image => (
-          <img key={image.id} src={image.url} />
+          <React.Fragment>
+            <img key={image.id} src={image.url} />
+            <div className="hl-color">{image.filename}</div>
+          </React.Fragment>
         ))}
       </div>
     )
