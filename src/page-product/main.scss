@@ -17,6 +17,14 @@
     letter-spacing: -1px;
   }
 
+  .hl-color {
+    position: absolute;
+    margin-top: -44px;
+    padding: 2px 8px;
+    background-color: #fffffffa;
+    border: 1px solid #989898;
+  }
+
   .hl-ask-for-info {
     background-color: #D9147F;
     padding: 15px 50px;
@@ -30,7 +38,10 @@
   .hl-product-wrapper {
     display: flex;
 
-    img { width: 100%; }
+    img { 
+      width: 100%; 
+      margin-bottom: 15px;
+    }
   }
 
   .hl-product-description-wrapper,
