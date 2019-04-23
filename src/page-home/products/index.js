@@ -29,7 +29,7 @@ class HomeProducts extends Component {
       .then(res => {
         this.setState({ 
           isLoaded: true, 
-          products: res.data
+          products: res.data.data
         })
       }).catch(error => {
         this.setState({ 

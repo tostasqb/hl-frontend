@@ -15,10 +15,11 @@ class HomePartners extends Component {
     return (
       <section className="hl-partnerships">
           <div className="container">
-            <header class="hl-section-header">
-              <h3 class="hl-title">Parceiros</h3>
-              <h4 class="hl-subtitle">Estamos bem acompanhados</h4>
+            <header className="hl-section-header">
+              <h3 className="hl-title">Parceiros</h3>
+              <h4 className="hl-subtitle">Estamos bem acompanhados</h4>
             </header>
+            
             <div className="hl-partner-wrapper">
               <a className="hl-partner" target="_blank" style={rashImage} href="https://walldesigner.rasch.de/gallery.do"></a>
               <a className="hl-partner" target="_blank" style={destinyImage} href="http://www.destinyanddesign.com/productos.php"></a>
