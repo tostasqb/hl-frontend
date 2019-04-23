@@ -45,8 +45,8 @@ class ProductList extends Component {
     }).then(res => {
       this.setState({ 
         isLoaded: true, 
-        products: res.data,
-        pagination: res.pagination
+        products: res.data.data,
+        pagination: res.data.pagination
       })
     }).catch(error => {
       this.setState({ 
