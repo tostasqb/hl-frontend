@@ -14,6 +14,7 @@ class ProductList extends Component {
       error: null,
       isLoaded: false,
       products: [],
+      pagination: {},
       filter: {}
     };
 
@@ -29,20 +30,23 @@ class ProductList extends Component {
     filter[name] = value;
 
     this.setState({ filter: filter });
+    this.getData(filter);
   }
 
-  componentDidMount() {
+  getData(filter = {}) {
     let endpoint = process.env.REACT_APP_API_URL + 'products';
 
     axios.get(endpoint, {
       params: {
         per_page: 30,
-        page: 1
+        page: 1,
+        filter: filter
       }
     }).then(res => {
       this.setState({ 
         isLoaded: true, 
-        products: res.data
+        products: res.data,
+        pagination: res.pagination
       })
     }).catch(error => {
       this.setState({ 
@@ -50,6 +54,10 @@ class ProductList extends Component {
         error
       })
     });
+  }
+
+  componentDidMount() {
+    this.getData();
   }
 
   render() {
