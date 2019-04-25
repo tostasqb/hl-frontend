@@ -2,6 +2,8 @@ import React, { Component } from 'react';
 import './main.scss';
 import axios from 'axios';
 
+import Loading from '../common/loading';
+
 class ContactUs extends Component {
   constructor(props) {
     super(props);
@@ -76,18 +78,18 @@ class ContactUs extends Component {
     if (error) {
       return <div>Error: {error.message}</div>;
     } else if (!isLoaded) {
-      return <div>Loading...</div>;
+      return <Loading />
     } else {
       return (
         <React.Fragment>
-          <div className="page-title">
+          <div className="hl-page-title">
             <div className="wrapper">
               <h1>Contactos</h1>
               <h2>Fale connosco, Nós ajudamos</h2>
             </div>
           </div>
 
-          <div className="gray-wrapper">
+          <div className="hl-gray-wrapper">
             <div className="container gray">
               <div dangerouslySetInnerHTML={{ __html: contactUs['contact-us'] }} />
               {this.renderForm()}

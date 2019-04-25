@@ -4,6 +4,7 @@ import axios from 'axios';
 
 import ProductTags from './tags'
 import ProductGrid from './product-grid'
+import Loading from '../common/loading';
 
 
 class ProductList extends Component {
@@ -66,18 +67,18 @@ class ProductList extends Component {
     if (error) {
       return <div>Error: {error.message}</div>;
     } else if (!isLoaded) {
-      return <div>Loading...</div>;
+      return <Loading />;
     } else {
       return (
         <React.Fragment>
-          <div className="page-title">
+          <div className="hl-page-title">
             <div className="wrapper">
               <h1>Os nossos produtos</h1>
               <h2>Todas as nossas colecções num sítio só</h2>
             </div>
           </div>
 
-          <div className="gray-wrapper">
+          <div className="hl-gray-wrapper">
             <div className="container gray">
               <div className="left">
                 <ProductTags onTagChange={this.handleTagChange} />

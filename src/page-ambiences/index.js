@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import './main.scss';
 import axios from 'axios';
 
+import Loading from '../common/loading';
 import AmbienceGrid from './ambience-grid'
 
 
@@ -42,18 +43,18 @@ class AmbiencesMain extends Component {
     if (error) {
       return <div>Error: {error.message}</div>;
     } else if (!isLoaded) {
-      return <div>Loading...</div>;
+      return <Loading />
     } else {
       return (
         <React.Fragment>
-          <div className="page-title">
+          <div className="hl-page-title">
             <div className="wrapper">
               <h1>Ambientes</h1>
               <h2>Um ambiente feito de pequenas coisas</h2>
             </div>
           </div>
 
-          <div className="gray-wrapper">
+          <div className="hl-gray-wrapper">
             <div className="container gray">
               <AmbienceGrid ambiences={ambiences} />
             </div>

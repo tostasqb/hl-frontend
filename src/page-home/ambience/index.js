@@ -3,6 +3,8 @@ import React, { Component } from 'react';
 import './main.scss';
 import axios from 'axios';
 
+import Loading from '../../common/loading';
+
 class HomeAmbience extends Component {
   constructor(props) {
     super(props);
@@ -50,7 +52,7 @@ class HomeAmbience extends Component {
     if (error) {
       return <div>Error: {error.message}</div>;
     } else if (!isLoaded) {
-      return <div>Loading...</div>;
+      return <Loading />
     } else {
       return (
         <section className="hl-home-ambience">

@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import './main.scss';
 import axios from 'axios';
+import Loading from '../common/loading';
 
 class AboutUs extends Component {
   constructor(props) {
@@ -37,18 +38,18 @@ class AboutUs extends Component {
     if (error) {
       return <div>Error: {error.message}</div>;
     } else if (!isLoaded) {
-      return <div>Loading...</div>;
+      return <Loading />
     } else {
       return (
         <React.Fragment>
-          <div className="page-title">
+          <div className="hl-page-title">
             <div className="wrapper">
               <h1>Sobre nós</h1>
               <h2>Decoração exclusiva a profissionais</h2>
             </div>
           </div>
 
-          <div className="gray-wrapper">
+          <div className="hl-gray-wrapper">
             <div className="container gray" dangerouslySetInnerHTML={{ __html: aboutUs['about-us'] }} />
           </div>
         </React.Fragment>

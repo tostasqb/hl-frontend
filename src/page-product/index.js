@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import './main.scss';
 import axios from 'axios';
+import Loading from '../common/loading';
 
 class Product extends Component {
   constructor(props) {
@@ -51,7 +52,7 @@ class Product extends Component {
     if (error) {
       return <div>Error: {error.message}</div>;
     } else if (!isLoaded) {
-      return <div>Loading...</div>;
+      return <Loading />
     } else {
       
       return (
