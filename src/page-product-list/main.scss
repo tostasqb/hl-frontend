@@ -13,8 +13,8 @@
   }
 
  .left {
-     width: 240px;
-     float: left;
+    width: 240px;
+    float: left;
  }
  
  .right {
@@ -27,5 +27,13 @@
 @media screen and (max-width: $tablet) {
   .hl-page-products {
     padding-top: 80px;
+    
+    .left {
+      width: 100;
+    }
+  
+    .right {
+      width: 100%;
+    }
   }
 }

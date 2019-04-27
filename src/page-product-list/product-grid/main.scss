@@ -82,3 +82,16 @@
     }
   }
 }
+
+@media screen and (max-width: $tablet) {
+  .hl-grid-products {
+    .hl-column {
+      flex: 100%;
+      max-width: 100%;
+    }
+  }
+
+  .hl-tags {
+    padding: 0 20px;
+  }
+}
