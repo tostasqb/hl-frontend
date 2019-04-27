@@ -19,7 +19,8 @@ body {
 }
 
 #root {
-  height: 100%;
+  min-height: 100%;
+  display: grid;
 }
 
 a {
@@ -79,8 +80,13 @@ a {
     text-align: center;
     padding: 25px 20px; 
 
+    h1 {
+      text-align: center;
+    }
+
     h2 {
       font-size: 27px;
+      text-align: center;
     }
   }
 }

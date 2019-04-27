@@ -3,8 +3,7 @@ import './main.scss';
 import axios from 'axios';
 
 import Loading from '../common/loading';
-import AmbienceGrid from './ambience-grid'
-
+import AmbienceGrid from './ambience-grid';
 
 class AmbiencesMain extends Component {
   constructor(props) {
@@ -45,6 +44,8 @@ class AmbiencesMain extends Component {
     } else if (!isLoaded) {
       return <Loading />
     } else {
+      // let amb = ambiences.map(i => i.image);
+
       return (
         <React.Fragment>
           <div className="hl-page-title">

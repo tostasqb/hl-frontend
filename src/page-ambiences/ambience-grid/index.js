@@ -4,16 +4,8 @@ import './main.scss';
 
 class AmbienceGrid extends Component {
   renderAmbience(ambience) {
-    const imageStyle = {
-      backgroundImage: `url(${ambience.image})`
-    }
-
     return(
-      <a href="#" className="hl-column" key={`ambience-${ambience.id}`}>
-        <div className="hl-ambience">
-          <div className="hl-ambience-image" style={imageStyle}></div>
-        </div>
-      </a>
+      <img key={`ambience-${ambience.id}`} className="hl-ambience-image" src={ambience.image} />
     )
   }
 
