@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import './main.scss';
 import axios from 'axios';
 import Loading from '../common/loading';
+import MetaTags from 'react-meta-tags';
 
 class Product extends Component {
   constructor(props) {
@@ -30,6 +31,18 @@ class Product extends Component {
         error
       })
     });
+  }
+
+  renderMetatags() {
+    let title = this.state.product.title + ' | High Line';
+
+    return (
+      <MetaTags>
+        <title>{title}</title>
+        <meta property="og:title" content={title} />
+        <meta property="og:image" content={this.state.product.image} />
+      </MetaTags>
+    )
   }
 
   renderImages() {
@@ -65,6 +78,8 @@ class Product extends Component {
 
       return (
         <React.Fragment>
+          {this.renderMetatags()}
+
           <div className="hl-product-wrapper container">
             {this.renderImages()}
             <div className="hl-product-description-wrapper">

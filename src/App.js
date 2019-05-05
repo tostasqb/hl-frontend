@@ -1,6 +1,8 @@
 import { BrowserRouter as Router, Route } from 'react-router-dom';
 import React, { Component } from 'react';
 
+import DefaultMetatags from './common/metatags';
+
 import Header from './header';
 import Footer from './footer';
 
@@ -17,6 +19,7 @@ import Ambiences from './page-ambiences';
 import AboutUs from './page-about-us';
 import ContactUs from './page-contact-us';
 import Terms from './page-terms';
+
 
 class App extends Component {
   render() {
@@ -42,6 +45,7 @@ class App extends Component {
 
 const LinkHome = () => (
   <div className="hl-page-home">
+    <DefaultMetatags />
     <HomeHero />
     <HomeProducts />
     <HomeQuote />
@@ -52,37 +56,42 @@ const LinkHome = () => (
 
 const LinkProducts = () => (
   <div className="hl-page-products">
-    <ProductList />    
-  </div>
-)
-
-const LinkAmbiences = () => (
-  <div className="hl-page-ambiences">
-    <Ambiences />    
-  </div>
-)
-
-const LinkAbout = () => (
-  <div className="hl-page-about-us">
-    <AboutUs />
-  </div>
-)
-
-const LinkContactUs = () => (
-  <div className="hl-page-contact-us">
-    <ContactUs />
-  </div>
-)
-
-const LinkTerms = () => (
-  <div className="hl-page-terms">
-    <Terms />
+    <DefaultMetatags />
+    <ProductList />
   </div>
 )
 
 const LinkProduct = () => (
   <div className="hl-page-product">
     <Product />
+  </div>
+)
+
+const LinkAmbiences = () => (
+  <div className="hl-page-ambiences">
+    <DefaultMetatags />
+    <Ambiences />
+  </div>
+)
+
+const LinkAbout = () => (
+  <div className="hl-page-about-us">
+    <DefaultMetatags />
+    <AboutUs />
+  </div>
+)
+
+const LinkContactUs = () => (
+  <div className="hl-page-contact-us">
+    <DefaultMetatags />
+    <ContactUs />
+  </div>
+)
+
+const LinkTerms = () => (
+  <div className="hl-page-terms">
+    <DefaultMetatags />
+    <Terms />
   </div>
 )
 
