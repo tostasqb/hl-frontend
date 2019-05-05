@@ -1,0 +1,28 @@
+.hl-share-icons {
+  margin-top: 20px;
+  display: flex;
+
+  .rcs-buttons {
+    display: block !important;
+  }
+
+  .rcs-button {
+    display: inline-block;
+    margin-right: 6px;
+    width: 34px;
+    height: 34px;
+    border-radius: 25px;
+    outline: none;
+    background: #d2d2d2;
+    min-height: auto;
+    padding: 0;
+
+    &:hover {
+      opacity: .9;
+
+      > svg {
+        transform: none;
+      }
+    }
+  }
+}

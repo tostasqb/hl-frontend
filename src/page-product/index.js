@@ -3,6 +3,7 @@ import './main.scss';
 import axios from 'axios';
 import Loading from '../common/loading';
 import MetaTags from 'react-meta-tags';
+import ShareComponent from './share';
 
 class Product extends Component {
   constructor(props) {
@@ -86,6 +87,12 @@ class Product extends Component {
               <h1>{product.title}</h1>
               <div className="hl-product-description" dangerouslySetInnerHTML={{ __html: product.description }} />
               <a rel="noopener noreferrer" target="_blank" className="hl-ask-for-info" href={info_link}>Pedir + Informação</a>
+              <div className="hl-share-icons">
+                <ShareComponent 
+                  title={product.title} 
+                  description={product.description} 
+                  image={this.state.product.image} />
+              </div>
             </div>
           </div>
         </React.Fragment>
