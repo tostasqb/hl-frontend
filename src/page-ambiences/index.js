@@ -7,8 +7,6 @@ import $ from 'jquery';
 import Loading from '../common/loading';
 import AmbienceGrid from './ambience-grid';
 
-// window.jQuery = window.$ = $;
-
 class AmbiencesMain extends Component {
   constructor(props) {
     super(props);

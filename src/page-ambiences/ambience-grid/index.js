@@ -6,7 +6,7 @@ import './main.scss';
 class AmbienceGrid extends Component {
   renderAmbience(ambience) {
     return(
-      <LazyLoad key={`ambience-${ambience.id}`} height={200}>
+      <LazyLoad key={`ambience-${ambience.id}`}>
         <img alt={`ambiente ${ambience.id}`} className="hl-ambience-image" src={ambience.image} />
       </LazyLoad>
     )

@@ -8,12 +8,25 @@
     margin-bottom: 30px;
     width: 100%;
   }
+
+  .LazyLoad {
+    height: 250px;
+
+    &.is-visible {
+      height: auto;
+    }
+  }
 }
+
 @media screen and (min-width: $desktop) {
   .hl-grid-ambiences {
     .column {
       flex: initial;
     // box-sizing: border-box;
+    }
+
+    .LazyLoad {
+      height: 700px;
     }
   }
 }
