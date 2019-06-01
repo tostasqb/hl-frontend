@@ -1,11 +1,14 @@
 import React, { Component } from 'react';
 import { arrayOf, object } from 'prop-types';
+import LazyLoad from 'react-lazy-load';
 import './main.scss';
 
 class AmbienceGrid extends Component {
   renderAmbience(ambience) {
     return(
-      <img key={`ambience-${ambience.id}`} className="hl-ambience-image" src={ambience.image} />
+      <LazyLoad key={`ambience-${ambience.id}`}>
+        <img alt={`ambiente ${ambience.id}`} className="hl-ambience-image" src={ambience.image} />
+      </LazyLoad>
     )
   }
 
