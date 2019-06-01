@@ -1,3 +1,5 @@
+[![Codacy Badge](https://api.codacy.com/project/badge/Grade/be10224ade794047bb4c211cb15b8f22)](https://www.codacy.com?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=tostasqb/hl-frontend&amp;utm_campaign=Badge_Grade)
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 Below you will find some information on how to perform common tasks.<br>
