@@ -1,4 +1,3 @@
-import { Link } from 'react-router-dom';
 import React, { Component } from 'react';
 import './main.scss';
 import axios from 'axios';
@@ -27,21 +26,21 @@ class ProductTags extends Component {
 
     axios.get(endpoint)
       .then(res => {
-        this.setState({ 
-          isLoaded: true, 
+        this.setState({
+          isLoaded: true,
           json: res.data
         })
       }).catch(error => {
-        this.setState({ 
-          isLoaded: true, 
+        this.setState({
+          isLoaded: true,
           error
         })
       });
   }
 
   renderTagGroup(group) {
-    let tags = this.state.json.tags.filter(tag => tag.tag_group_id == group.id);
-    
+    let tags = this.state.json.tags.filter(tag => tag.tag_group_id === group.id);
+
     return(
       <div key={`group-${group.id}`}>
         <div className="hl-title">{group.name}</div>
@@ -59,8 +58,8 @@ class ProductTags extends Component {
     return(
       <li className="hl-tag-item" key={`tag-${tag.id}`}>
         <label className="hl-label">
-          <input type="checkbox" 
-                 name={tag.name} 
+          <input type="checkbox"
+                 name={tag.name}
                  className="hl-tag-checkbox"
                  checked={this.state[tag.name]}
                  onChange={this.handleChange} />
