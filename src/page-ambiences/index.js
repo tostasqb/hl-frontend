@@ -2,8 +2,12 @@ import React, { Component } from 'react';
 import './main.scss';
 import axios from 'axios';
 
+import $ from 'jquery';
+
 import Loading from '../common/loading';
 import AmbienceGrid from './ambience-grid';
+
+// window.jQuery = window.$ = $;
 
 class AmbiencesMain extends Component {
   constructor(props) {
@@ -17,23 +21,36 @@ class AmbiencesMain extends Component {
 
   componentDidMount() {
     let endpoint = process.env.REACT_APP_API_URL + 'ambiences';
+    let device = this.targetDevice();
 
     axios.get(endpoint, {
       params: {
         per_page: 30,
-        page: 1
+        page: 1,
+        device: device
       }
     }).then(res => {
-      this.setState({ 
-        isLoaded: true, 
+      this.setState({
+        isLoaded: true,
         ambiences: res.data
       })
     }).catch(error => {
-      this.setState({ 
-        isLoaded: true, 
+      this.setState({
+        isLoaded: true,
         error
       })
     });
+  }
+
+  targetDevice() {
+    let windowWirdth = $(window).width();
+    if(windowWirdth > 1224) {
+      return 'desktop';
+    } else if(windowWirdth > 800) {
+      return 'tablet';
+    } else {
+      return 'mobile';
+    }
   }
 
   render() {

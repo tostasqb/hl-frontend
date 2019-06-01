@@ -5,8 +5,8 @@
 
 .hl-grid-ambiences {
   .hl-ambience-image {
-    width: 100%;
     margin-bottom: 30px;
+    width: 100%;
   }
 }
 @media screen and (min-width: $desktop) {
@@ -19,9 +19,5 @@
 }
 
 @media screen and (min-width: $fullhd) {
-  .hl-grid-ambiences {
-    .hl-ambience-image {
-      height: 270px;
-    }
-  }
+
 }

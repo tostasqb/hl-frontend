@@ -27,18 +27,21 @@ class HomeProducts extends Component {
   componentDidMount() {
     let endpoint = process.env.REACT_APP_API_URL + 'products';
 
-    axios.get(endpoint)
-      .then(res => {
-        this.setState({ 
-          isLoaded: true, 
-          products: res.data.data
-        })
-      }).catch(error => {
-        this.setState({ 
-          isLoaded: true, 
-          error
-        })
-      });
+    axios.get(endpoint, {
+      params: {
+        device: 'mobile'
+      }
+    }).then(res => {
+      this.setState({
+        isLoaded: true,
+        products: res.data.data
+      })
+    }).catch(error => {
+      this.setState({
+        isLoaded: true,
+        error
+      })
+    });
   }
 
   renderProduct(product) {

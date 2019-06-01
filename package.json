@@ -1,6 +1,6 @@
 {
   "name": "hl-frontend",
-  "version": "0.1.1",
+  "version": "0.2.0",
   "description": "Website for highline.com.pt",
   "repository": "git@gitlab.com:tostasqb/hl-frontend.git",
   "private": true,

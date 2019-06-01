@@ -18,18 +18,21 @@ class HomeAmbience extends Component {
   componentDidMount() {
     let endpoint = process.env.REACT_APP_API_URL + 'ambiences';
 
-    axios.get(endpoint)
-      .then(res => {
-        this.setState({ 
-          isLoaded: true, 
-          ambiences: res.data
-        })
-      }).catch(error => {
-        this.setState({ 
-          isLoaded: true, 
-          error
-        })
-      });
+    axios.get(endpoint, {
+      params: {
+        device: 'mobile'
+      }
+    }).then(res => {
+      this.setState({
+        isLoaded: true,
+        ambiences: res.data
+      })
+    }).catch(error => {
+      this.setState({
+        isLoaded: true,
+        error
+      })
+    });
   }
 
   renderAmbience(ambience) {
