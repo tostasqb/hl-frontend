@@ -26,16 +26,19 @@ class App extends Component {
     return (
       <Router>
         <React.Fragment>
+          <a class="skip-link" href="#maincontent">Skip to main</a>
           <Header />
-            <React.Fragment>
-              <Route exact path="/" component={LinkHome} />
-              <Route exact path="/products" component={LinkProducts} />
-              <Route exact path="/ambiences" component={LinkAmbiences} />
-              <Route exact path="/about" component={LinkAbout} />
-              <Route exact path="/contacts" component={LinkContactUs} />
-              <Route exact path="/terms" component={LinkTerms} />
-              <Route path="/product/:productid/:slug" component={LinkProduct} />
-            </React.Fragment>
+            <main id="maincontent">
+              <React.Fragment>
+                <Route exact path="/" component={LinkHome} />
+                <Route exact path="/products" component={LinkProducts} />
+                <Route exact path="/ambiences" component={LinkAmbiences} />
+                <Route exact path="/about" component={LinkAbout} />
+                <Route exact path="/contacts" component={LinkContactUs} />
+                <Route exact path="/terms" component={LinkTerms} />
+                <Route path="/product/:productid/:slug" component={LinkProduct} />
+              </React.Fragment>
+            </main>
           <Footer />
         </React.Fragment>
       </Router>
