@@ -70,3 +70,11 @@
     }
   }
 }
+
+@media screen and (max-width: $tablet) {
+  .hl-home-products {
+    .hl-product {
+      display: grid;
+    }
+  }
+}
