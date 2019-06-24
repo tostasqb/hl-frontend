@@ -70,7 +70,7 @@ class Product extends Component {
     } else {
 
       let mail_to = {
-        to: 'geral@highline.com.pt',
+        to: 'jorge.brito@highline.com.pt',
         subject: 'Pedir informação sobre ' + product.title,
         body: "Gostaria de obter mais informação sobre o produto que vi neste link:%0D%0A" + window.location.href
       }
