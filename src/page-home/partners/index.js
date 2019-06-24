@@ -22,7 +22,7 @@ class HomePartners extends Component {
 
             <div className="hl-partner-wrapper">
               <a className="hl-partner" target="_blank" rel="noopener noreferrer" style={rashImage} href="https://walldesigner.rasch.de/gallery.do"> </a>
-              <a className="hl-partner" target="_blank" rel="noopener noreferrer" style={destinyImage} href="http://www.destinyanddesign.com/productos.php"> </a>
+              <a className="hl-partner" target="_blank" rel="noopener noreferrer" style={destinyImage} href="https://www.destinydecor.es"> </a>
               <a className="hl-partner" target="_blank" rel="noopener noreferrer" style={bbImage} href="http://www.bbhomepassion.de/en/collections/"> </a>
               <a className="hl-partner" target="_blank" rel="noopener noreferrer" style={elbersdruckeImage} href="http://www.elbersdrucke.de/homevision.php"> </a>
             </div>
