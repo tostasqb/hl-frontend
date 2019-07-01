@@ -7,9 +7,9 @@
 
 .hl-main {
   background: linear-gradient(to top, rgba(255, 255, 255, 0.4) 19%, white 82%), url("homepage.jpg") no-repeat;
-  background-size: cover;
-  background-repeat: no-repeat;
   background-position: center bottom;
+  background-repeat: no-repeat;
+  background-size: cover;
 
   h1,
   h2,
@@ -17,8 +17,8 @@
     color: $gray;
     font-family: $font-main;
     font-style: italic;
-    margin: 5px 0;
     line-height: 1em;
+    margin: 5px 0;
     max-width: 430px;
     letter-spacing: -1px;
 
@@ -36,37 +36,37 @@
 
   h3 {
     color: $main;
-    font-weight: 100;
-    font-size: 21px;
     text-shadow: 0px 0px 1px $white;
+    font-size: 21px;
+    font-weight: 100;
   }
 
   &__actions {
-    font-size: 14px;
     color: $gray;
+    font-size: 14px;
     margin: 40px 0;
   }
 
   &__primary {
     background-color: $main;
-    padding: 10px 45px;
-    font-size: 18px;
     color: $white;
+    font-size: 18px;
     margin-right: 20px;
+    padding: 10px 45px;
   }
 
   &__secondary {
     background-color: $white;
     border: 1px solid $light-gray;
     color: $gray;
-    padding: 6px 30px;
     font-size: 13px;
     margin-left: 20px;
+    padding: 6px 30px;
   }
 }
 
 @media screen and (min-width: $desktop) {
-  .hero-body > .container{ 
+  .hero-body > .container {
     padding-left: 200px;
   }
 }
@@ -75,7 +75,7 @@
   .hl-main {
     padding-top: 120px;
 
-    &__actions { 
+    &__actions {
       display: flex;
       flex-direction: column;
 
@@ -84,10 +84,15 @@
       }
     }
 
-    &__primary, 
+    h3 {
+      font-weight: 400;
+      text-shadow: 0px 0px 1px #d4d3d3;
+    }
+
+    &__primary,
     &__secondary {
-      margin: 0;
       align-self: flex-start;
+      margin: 0;
     }
   }
 }

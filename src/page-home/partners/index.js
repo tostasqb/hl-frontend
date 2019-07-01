@@ -7,11 +7,6 @@ import bb from './bb-home-passion.jpg';
 
 class HomePartners extends Component {
   render() {
-    const rashImage = { backgroundImage: `url(${rasch})` }
-    const destinyImage = { backgroundImage: `url(${destiny})` }
-    const elbersdruckeImage = { backgroundImage: `url(${elbersdrucke})` }
-    const bbImage = { backgroundImage: `url(${bb})` }
-
     return (
       <section className="hl-partnerships">
           <div className="container">
@@ -21,10 +16,10 @@ class HomePartners extends Component {
             </header>
 
             <div className="hl-partner-wrapper">
-              <a className="hl-partner" target="_blank" rel="noopener noreferrer" style={rashImage} href="https://walldesigner.rasch.de/gallery.do"> </a>
-              <a className="hl-partner" target="_blank" rel="noopener noreferrer" style={destinyImage} href="https://www.destinydecor.es"> </a>
-              <a className="hl-partner" target="_blank" rel="noopener noreferrer" style={bbImage} href="http://www.bbhomepassion.de/en/collections/"> </a>
-              <a className="hl-partner" target="_blank" rel="noopener noreferrer" style={elbersdruckeImage} href="http://www.elbersdrucke.de/homevision.php"> </a>
+              <a className="hl-partner-link" href="https://walldesigner.rasch.de/gallery.do"><img src={rasch} alt={rasch} /></a>
+              <a className="hl-partner-link" href="https://www.destinydecor.es"><img src={destiny} alt={destiny} /></a>
+              <a className="hl-partner-link" href="http://www.bbhomepassion.de/en/collections/"><img src={bb} alt={bb} /></a>
+              <a className="hl-partner-link" href="http://www.elbersdrucke.de/homevision.php"><img src={elbersdrucke} alt={elbersdrucke} /></a>
             </div>
           </div>
       </section>

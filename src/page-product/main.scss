@@ -58,5 +58,29 @@
 @media screen and (max-width: $tablet) {
   .hl-page-product {
     padding-top: 80px;
+
+    .hl-product-wrapper {
+      flex-direction: column;
+    }
+
+    .hl-product-description-wrapper {
+      margin: 0;
+      padding: 10px;
+      width: 100%;
+    }
+
+    .hl-product-image {
+      margin: 0;
+      order: 2;
+      padding: 10px;
+      width: 100%;
+    }
+
+    .hl-ask-for-info {
+      margin: 0;
+      padding: 10px 0;
+      text-align: center;
+      width: 100%;
+    }
   }
 }
