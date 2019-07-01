@@ -26,7 +26,7 @@ class App extends Component {
     return (
       <Router>
         <React.Fragment>
-          <a class="skip-link" href="#maincontent">Skip to main</a>
+          <a className="skip-link" href="#maincontent">Skip to main</a>
           <Header />
             <main id="maincontent">
               <React.Fragment>

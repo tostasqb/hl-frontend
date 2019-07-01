@@ -67,6 +67,7 @@
   .hl-home-products {
     .column {
       flex: initial;
+      box-sizing: border-box;
     }
   }
 }

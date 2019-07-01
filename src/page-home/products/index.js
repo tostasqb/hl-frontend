@@ -50,7 +50,7 @@ class HomeProducts extends Component {
     }
 
     return(
-      <Link to={`/product/${product.id}/${this.slugify(product.title)}`} className="column is-one-third-desktop" key={`product-${product.id}`}>
+      <Link to={`/product/${product.id}/${this.slugify(product.title)}`} className="column is-one-third" key={`product-${product.id}`}>
         <div className="hl-product">
           <div className="hl-product-image" style={imageStyle}></div>
           <div className="hl-product-top">
