@@ -1,4 +1,4 @@
-import { BrowserRouter as Router, Route } from 'react-router-dom';
+import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import React, { Component } from 'react';
 
 import DefaultMetatags from './common/metatags';
@@ -19,7 +19,7 @@ import Ambiences from './page-ambiences';
 import AboutUs from './page-about-us';
 import ContactUs from './page-contact-us';
 import Terms from './page-terms';
-
+import NotFound from './page-not-found';
 
 class App extends Component {
   render() {
@@ -30,13 +30,16 @@ class App extends Component {
           <Header />
             <main id="maincontent">
               <React.Fragment>
-                <Route exact path="/" component={LinkHome} />
-                <Route exact path="/products" component={LinkProducts} />
-                <Route exact path="/ambiences" component={LinkAmbiences} />
-                <Route exact path="/about" component={LinkAbout} />
-                <Route exact path="/contacts" component={LinkContactUs} />
-                <Route exact path="/terms" component={LinkTerms} />
-                <Route path="/product/:productid/:slug" component={LinkProduct} />
+                <Switch>
+                  <Route exact path="/" component={LinkHome} />
+                  <Route exact path="/products" component={LinkProducts} />
+                  <Route exact path="/ambiences" component={LinkAmbiences} />
+                  <Route exact path="/about" component={LinkAbout} />
+                  <Route exact path="/contacts" component={LinkContactUs} />
+                  <Route exact path="/terms" component={LinkTerms} />
+                  <Route path="/product/:productid/:slug" component={LinkProduct} />
+                  <Route component={NoMatch} />
+                </Switch>
               </React.Fragment>
             </main>
           <Footer />
@@ -95,6 +98,12 @@ const LinkTerms = () => (
   <div className="hl-page-terms">
     <DefaultMetatags />
     <Terms />
+  </div>
+)
+
+const NoMatch = ({ location }) => (
+  <div className="hl-page-not-found">
+    <NotFound location={location} />
   </div>
 )
 
