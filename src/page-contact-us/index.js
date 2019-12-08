@@ -21,25 +21,29 @@ class ContactUs extends Component {
         piece: ['contact-us', 'lisboa', 'espinho']
       }
     }).then(res => {
-      this.setState({ 
-        isLoaded: true, 
+      this.setState({
+        isLoaded: true,
         contactUs: res.data
       })
     }).catch(error => {
-      this.setState({ 
-        isLoaded: true, 
+      this.setState({
+        isLoaded: true,
         error
       })
     });
   }
 
   renderForm() {
-    return(
+    let mail_to = {
+      to: 'jorge.brito@highline.com.pt',
+      subject: 'Contacto a partir de highline.com.pt',
+      body: 'Gostaria de obter mais informação'
+    };
+    let info_link = ('mailto:' + mail_to.to + '?subject=' + mail_to.subject + '&body=' + mail_to.body);
+
+    return (
       <div>
-        <iframe src="https://www.powr.io/plugins/contact-form/view/19410018" 
-        width="100%;"
-        height="544" 
-        frameBorder="0"></iframe>
+        <a rel="noopener noreferrer" target="_blank" className="hl-contact-us" href={info_link}>Enviar um Email</a>
       </div>
     )
   }

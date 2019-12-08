@@ -79,3 +79,9 @@ class Header extends Component {
 }
 
 export default Header;
+
+$(() => {
+  $('.navbar-item').click(() => {
+    $('.navbar-burger').click()
+  });
+});

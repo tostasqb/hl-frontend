@@ -4,17 +4,24 @@
 @import 'bulma/sass/layout/section.sass';
 
 .hl-home-ambience {
-  margin-bottom: 40px;
+  margin-bottom: 80px;
 
   .hl-action {
     text-align: center;
+    margin: 40px 0;
   }
 
   .hl-button {
     padding: 8px 40px;
-    border: 1px solid $light-gray;
+    background-color: #ededed;
+    border: 1px solid #ededed;
     color: $gray;
     display: inline-block;
+    transition: all .3s;
+
+    &:hover {
+      box-shadow: #b5b5b5 9px 8px 12px;
+    }
   }
 
   .hl-ambience-image {
