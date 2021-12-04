@@ -65,7 +65,7 @@ class HomeAmbience extends Component {
               <h4 className="hl-subtitle">Porque é mais fácil ver as coisas num contexto</h4>
             </header>
 
-            <div className="columns">
+            <div className="columns is-gapless">
               {ambiences.map(ambience => (
                 this.renderAmbience(ambience)
               ))}

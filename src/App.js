@@ -1,4 +1,4 @@
-import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import React, { Component } from 'react';
 
 import DefaultMetatags from './common/metatags';
@@ -24,30 +24,30 @@ import NotFound from './page-not-found';
 class App extends Component {
   render() {
     return (
-      <Router>
-        <React.Fragment>
+        <>
           <a className="skip-link" href="#maincontent">Skip to main</a>
           <Header />
             <main id="maincontent">
+              asdasdasd
               <React.Fragment>
-                <Switch>
-                  <Route exact path="/" component={LinkHome} />
-                  <Route exact path="/products" component={LinkProducts} />
-                  <Route exact path="/ambiences" component={LinkAmbiences} />
-                  <Route exact path="/about" component={LinkAbout} />
-                  <Route exact path="/contacts" component={LinkContactUs} />
-                  <Route exact path="/terms" component={LinkTerms} />
-                  <Route path="/product/:productid/:slug" component={LinkProduct} />
-                  <Route component={NoMatch} />
-                </Switch>
+                <Routes>
+                  <Route exact path="/" element={<LinkHome />} />
+                  <Route exact path="/products" element={<LinkProducts />} />
+                  <Route exact path="/ambiences" element={<LinkAmbiences />} />
+                  <Route exact path="/about" element={<LinkAbout />} />
+                  <Route exact path="/contacts" element={<LinkContactUs />} />
+                  <Route exact path="/terms" element={<LinkTerms />} />
+                  <Route path="/product/:productid/:slug" element={<LinkProduct />} />
+                  <Route element={NoMatch} />
+                </Routes>
               </React.Fragment>
             </main>
           <Footer />
-        </React.Fragment>
-      </Router>
+        </>
     );
   }
 }
+
 
 const LinkHome = () => (
   <div className="hl-page-home">

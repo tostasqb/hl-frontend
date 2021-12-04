@@ -1,7 +1,7 @@
-@import 'bulma/sass/utilities/_all.sass';
-@import '../../common/variables.scss';
+@import "bulma/sass/utilities/_all.sass";
+@import "../../common/variables.scss";
 
-@import 'bulma/sass/layout/section.sass';
+@import "bulma/sass/layout/section.sass";
 
 .hl-home-ambience {
   margin-bottom: 80px;
@@ -17,7 +17,7 @@
     border: 1px solid #ededed;
     color: $gray;
     display: inline-block;
-    transition: all .3s;
+    transition: all 0.3s;
 
     &:hover {
       box-shadow: #b5b5b5 9px 8px 12px;
@@ -25,20 +25,18 @@
   }
 
   .hl-ambience-image {
-    height: 270px;
+    height: 310px;
     background-size: cover;
     background-color: $background-gray;
     background-position: center;
-    transition: all .4s ease-in-out;
+    transition: all 0.4s ease-in-out;
   }
 }
 
 @media screen and (max-width: $tablet - 1px) {
-
 }
 
 @media screen and (max-width: $tablet - 1px) {
-
 }
 
 @media screen and (min-width: $desktop) {
