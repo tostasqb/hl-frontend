@@ -1,4 +1,4 @@
-import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import { Route, Routes } from 'react-router-dom';
 import React, { Component } from 'react';
 
 import DefaultMetatags from './common/metatags';
@@ -28,7 +28,6 @@ class App extends Component {
           <a className="skip-link" href="#maincontent">Skip to main</a>
           <Header />
             <main id="maincontent">
-              asdasdasd
               <React.Fragment>
                 <Routes>
                   <Route exact path="/" element={<LinkHome />} />

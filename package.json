@@ -14,7 +14,6 @@
     "node-sass": "^6.0.1",
     "prop-types": "^15.7.2",
     "react": "^17.0.2",
-    "react-custom-share": "^0.4.8",
     "react-dom": "^17.0.2",
     "react-icons": "^4.3.1",
     "react-lazy-load": "^3.0.13",
